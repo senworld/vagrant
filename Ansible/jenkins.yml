@@ -13,6 +13,3 @@
         volumes:
           - /vagrant/data/jenkins:/var/jenkins_home
         
-    - name: Read Initial Password
-      ansible.builtin.debug:
-        msg: "{{ lookup('ansible.builtin.file', '/vagrant/data/jenkins/secrets/initialAdminPassword') }}"
