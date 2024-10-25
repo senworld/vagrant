@@ -2,7 +2,7 @@ $x = 0
 Vagrant.configure('2') do |config|
   ('A'..'B').each do |i|
   config.vm.define "Server#{i}" do |machine|
-    machine.vm.box = 'bento/centos-stream-9'
+    machine.vm.box = 'generic/debian12'
     #  auto_config: false
     machine.vm.network "forwarded_port", guest: 22, host: (9000+$x)
     $x = $x +1
